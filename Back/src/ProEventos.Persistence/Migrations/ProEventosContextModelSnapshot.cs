@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProEventos.Persistence;
-using ProEventos.Persistence.Contexto;
+using ProEventos.Persistence.Contextos;
 
 namespace ProEventos.Persistence.Migrations
 {
@@ -29,7 +29,7 @@ namespace ProEventos.Persistence.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ImagemUrl")
+                    b.Property<string>("ImagemURL")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Local")
@@ -89,7 +89,7 @@ namespace ProEventos.Persistence.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ImagemUrl")
+                    b.Property<string>("ImagemURL")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MiniCurriculo")
@@ -118,7 +118,7 @@ namespace ProEventos.Persistence.Migrations
 
                     b.HasIndex("PalestranteId");
 
-                    b.ToTable("PalestranteEventos");
+                    b.ToTable("PalestrantesEventos");
                 });
 
             modelBuilder.Entity("ProEventos.Domain.RedeSocial", b =>
@@ -136,7 +136,7 @@ namespace ProEventos.Persistence.Migrations
                     b.Property<int?>("PalestranteId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("URL")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -145,7 +145,7 @@ namespace ProEventos.Persistence.Migrations
 
                     b.HasIndex("PalestranteId");
 
-                    b.ToTable("RedeSociais");
+                    b.ToTable("RedesSociais");
                 });
 
             modelBuilder.Entity("ProEventos.Domain.Lote", b =>
